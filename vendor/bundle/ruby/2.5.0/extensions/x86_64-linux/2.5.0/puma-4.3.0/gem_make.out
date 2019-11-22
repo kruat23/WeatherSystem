@@ -1,0 +1,24 @@
+current directory: /home/kruat/Weather_System-master/Weather_System/vendor/bundle/ruby/2.5.0/gems/puma-4.3.0/ext/puma_http11
+/usr/bin/ruby2.5 -r ./siteconf20191122-28923-1thltjt.rb extconf.rb
+checking for BIO_read() in -lcrypto... no
+checking for BIO_read() in -llibeay32... no
+creating Makefile
+
+current directory: /home/kruat/Weather_System-master/Weather_System/vendor/bundle/ruby/2.5.0/gems/puma-4.3.0/ext/puma_http11
+make "DESTDIR=" clean
+
+current directory: /home/kruat/Weather_System-master/Weather_System/vendor/bundle/ruby/2.5.0/gems/puma-4.3.0/ext/puma_http11
+make "DESTDIR="
+compiling http11_parser.c
+compiling io_buffer.c
+compiling mini_ssl.c
+compiling puma_http11.c
+puma_http11.c: In function ‘http_field’:
+puma_http11.c:203:22: warning: implicit declaration of function ‘isspace’ [-Wimplicit-function-declaration]
+   while (vlen > 0 && isspace(value[vlen - 1])) vlen--;
+                      ^~~~~~~
+linking shared-object puma/puma_http11.so
+
+current directory: /home/kruat/Weather_System-master/Weather_System/vendor/bundle/ruby/2.5.0/gems/puma-4.3.0/ext/puma_http11
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20191122-28923-gwz5i9/puma
