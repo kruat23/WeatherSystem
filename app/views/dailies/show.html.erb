@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Uploader:</strong>
+  <%= @daily.uploader_id %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @daily.location_id %>
+</p>
+
+<p>
+  <strong>Month:</strong>
+  <%= @daily.month %>
+</p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @daily.day %>
+</p>
+
+<p>
+  <strong>Min:</strong>
+  <%= @daily.min %>
+</p>
+
+<p>
+  <strong>Max:</strong>
+  <%= @daily.max %>
+</p>
+
+<p>
+  <strong>Precipitation:</strong>
+  <%= @daily.precipitation %>
+</p>
+
+<p>
+  <strong>Storm:</strong>
+  <%= @daily.storm %>
+</p>
+
+<p>
+  <strong>Shower:</strong>
+  <%= @daily.shower %>
+</p>
+
+<p>
+  <strong>Rain:</strong>
+  <%= @daily.rain %>
+</p>
+
+<p>
+  <strong>Fog:</strong>
+  <%= @daily.fog %>
+</p>
+
+<p>
+  <strong>Sleet:</strong>
+  <%= @daily.sleet %>
+</p>
+
+<p>
+  <strong>Snow:</strong>
+  <%= @daily.snow %>
+</p>
+
+<p>
+  <strong>Snow shower:</strong>
+  <%= @daily.snow_shower %>
+</p>
+
+<p>
+  <strong>Snow cover:</strong>
+  <%= @daily.snow_cover %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @daily.note %>
+</p>
+
+<%= link_to 'Edit', edit_daily_path(@daily) %> |
+<%= link_to 'Back', dailies_path %>

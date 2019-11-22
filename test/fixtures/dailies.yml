@@ -1,0 +1,37 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uploader_id: MyString
+  location_id: MyString
+  month: MyString
+  day: 1
+  min: 1.5
+  max: 1.5
+  precipitation: 1.5
+  storm: false
+  shower: false
+  rain: false
+  fog: false
+  sleet: false
+  snow: false
+  snow_shower: false
+  snow_cover: 1
+  note: MyText
+
+two:
+  uploader_id: MyString
+  location_id: MyString
+  month: MyString
+  day: 1
+  min: 1.5
+  max: 1.5
+  precipitation: 1.5
+  storm: false
+  shower: false
+  rain: false
+  fog: false
+  sleet: false
+  snow: false
+  snow_shower: false
+  snow_cover: 1
+  note: MyText

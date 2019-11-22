@@ -1,0 +1,97 @@
+<%= form_with(model: daily, local: true) do |form| %>
+  <% if daily.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(daily.errors.count, "error") %> prohibited this daily from being saved:</h2>
+
+      <ul>
+        <% daily.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :uploader_id %>
+    <%= form.text_field :uploader_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location_id %>
+    <%= form.text_field :location_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :month %>
+    <%= form.text_field :month %>
+  </div>
+
+  <div class="field">
+    <%= form.label :day %>
+    <%= form.number_field :day %>
+  </div>
+
+  <div class="field">
+    <%= form.label :min %>
+    <%= form.text_field :min %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max %>
+    <%= form.text_field :max %>
+  </div>
+
+  <div class="field">
+    <%= form.label :precipitation %>
+    <%= form.text_field :precipitation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :storm %>
+    <%= form.check_box :storm %>
+  </div>
+
+  <div class="field">
+    <%= form.label :shower %>
+    <%= form.check_box :shower %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rain %>
+    <%= form.check_box :rain %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fog %>
+    <%= form.check_box :fog %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sleet %>
+    <%= form.check_box :sleet %>
+  </div>
+
+  <div class="field">
+    <%= form.label :snow %>
+    <%= form.check_box :snow %>
+  </div>
+
+  <div class="field">
+    <%= form.label :snow_shower %>
+    <%= form.check_box :snow_shower %>
+  </div>
+
+  <div class="field">
+    <%= form.label :snow_cover %>
+    <%= form.number_field :snow_cover %>
+  </div>
+
+  <div class="field">
+    <%= form.label :note %>
+    <%= form.text_area :note %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
