@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= form.label :day %>
-    <%= form.number_field :day %>
+    <%= form.number_field :day, {min: 1, max: 31} %>
   </div>
 
   <div class="field">
@@ -83,7 +83,7 @@
 
   <div class="field">
     <%= form.label :snow_cover %>
-    <%= form.number_field :snow_cover %>
+    <%= form.number_field :snow_cover, {min: 0, max: 100} %>
   </div>
 
   <div class="field">
