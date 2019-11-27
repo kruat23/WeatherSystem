@@ -1,79 +1,87 @@
-<%= form_with(model: daily, local: true) do |form| %>
-  <% if daily.errors.any? %>
+<%= form_for(@daily) do |f| %>
+  <% if @daily.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(daily.errors.count, "error") %> prohibited this daily from being saved:</h2>
-
+      <h2><%= pluralize(@daily.errors.count, "error") %> prohibited this daily from being saved:</h2>
       <ul>
-        <% daily.errors.full_messages.each do |message| %>
+        <% @daily.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :uploader_id %>
-    <%= form.text_field :uploader_id %>
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= f.label :uploader_id %><br>
+      <%= f.text_field :uploader_id, class: "form-control" %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :location_id %>
-    <%= form.text_field :location_id %>
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= f.label :location_id %><br>
+      <%= f.text_field :location_id, class: "form-control" %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :month %>
-    <%= form.text_field :month %>
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= f.label :month %><br>
+      <%= f.text_field :month, class: "form-control" %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :day %>
-    <%= form.number_field :day, {min: 1, max: 31} %>
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= f.label :day  %><br>
+      <%= f.number_field :day, {min: 1, max: 31} %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :min %>
-    <%= form.text_field :min %>
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= f.label :min %><br>
+      <%= f.text_field :min, class: "form-control" %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :max %>
-    <%= form.text_field :max %>
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= f.label :max %><br>
+      <%= f.text_field :max, class: "form-control" %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :precipitation %>
-    <%= form.text_field :precipitation %>
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= f.label :precipitation %><br>
+      <%= f.text_field :precipitation, class: "form-control" %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :storm %>
-    <%= form.check_box :storm %>
-    <%= form.label :shower %>
-    <%= form.check_box :shower %>
-    <%= form.label :rain %>
-    <%= form.check_box :rain %>
-    <%= form.label :fog %>
-    <%= form.check_box :fog %>
-    <%= form.label :sleet %>
-    <%= form.check_box :sleet %>
-    <%= form.label :snow %>
-    <%= form.check_box :snow %>
-    <%= form.label :snow_shower %>
-    <%= form.check_box :snow_shower %>
-  </div>  
-
-  <div class="field">
-    <%= form.label :snow_cover %>
-    <%= form.number_field :snow_cover, {min: 0, max: 100} %>
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= f.label :storm %>
+      <%= f.check_box :storm %>
+      <%= f.label :shower %>
+      <%= f.check_box :shower %>
+      <%= f.label :rain%>
+      <%= f.check_box :rain %>
+      <%= f.label :fog %>
+      <%= f.check_box :fog %>
+      <%= f.label :sleet %>
+      <%= f.check_box :sleet %>
+      <%= f.label :snow %>
+      <%= f.check_box :snow %>
+      <%= f.label :snow_shower %>
+      <%= f.check_box :snow_shower %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :note %>
-    <%= form.text_area :note %>
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= f.label :snow_cover %><br>
+      <%= f.number_field :snow_cover, {min: 0, max: 100} %>
+    </div>
   </div>
-
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= f.label :note %><br>
+      <%= f.text_area :note, class: "form-control" %>
+    </div>
+  </div>
   <div class="actions">
-    <%= form.submit %>
+    <%= f.submit 'Create', class: "btn btn-primary" %>
   </div>
 <% end %>
