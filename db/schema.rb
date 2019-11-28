@@ -31,8 +31,6 @@ ActiveRecord::Schema.define(version: 2019_11_28_204823) do
     t.text "note"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["location_id"], name: "index_dailies_on_location_id", unique: true
-    t.index ["uploader_id"], name: "index_dailies_on_uploader_id", unique: true
   end
 
   create_table "locations", force: :cascade do |t|
