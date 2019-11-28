@@ -10,49 +10,49 @@
     </div>
   <% end %>
   <div class="row">
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-8">
       <%= f.label :uploader_id %><br>
       <%= f.text_field :uploader_id, class: "form-control" %>
     </div>
   </div>
   <div class="row">
-    <div class="form-group col-md-4">
-      <%= f.label :location_id %><br>
+    <div class="form-group col-md-8">
+      <%= f.label :location_id %>
       <%= f.text_field :location_id, class: "form-control" %>
     </div>
   </div>
   <div class="row">
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-8">
       <%= f.label :month %><br>
       <%= f.text_field :month, class: "form-control" %>
     </div>
   </div>
   <div class="row">
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-8">
       <%= f.label :day  %><br>
       <%= f.number_field :day, {min: 1, max: 31} %>
     </div>
   </div>
   <div class="row">
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-8">
       <%= f.label :min %><br>
       <%= f.text_field :min, class: "form-control" %>
     </div>
   </div>
   <div class="row">
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-8">
       <%= f.label :max %><br>
       <%= f.text_field :max, class: "form-control" %>
     </div>
   </div>
   <div class="row">
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-8">
       <%= f.label :precipitation %><br>
       <%= f.text_field :precipitation, class: "form-control" %>
     </div>
   </div>
   <div class="row">
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-12">
       <%= f.label :storm %>
       <%= f.check_box :storm %>
       <%= f.label :shower %>
@@ -70,13 +70,13 @@
     </div>
   </div>
   <div class="row">
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-8">
       <%= f.label :snow_cover %><br>
       <%= f.number_field :snow_cover, {min: 0, max: 100} %>
     </div>
   </div>
   <div class="row">
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-8">
       <%= f.label :note %><br>
       <%= f.text_area :note, class: "form-control" %>
     </div>
