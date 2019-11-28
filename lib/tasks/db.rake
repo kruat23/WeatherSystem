@@ -12,11 +12,14 @@ namespace :db do
                         password: 'makkama25', password_confirmation: 'makkama25')
     user2.add_role(:client)
 
-    daily1 = Daily.create(uploader_id: user1.username, location_id: "Szeged", month:"January", day: 1,
+    location1 = Location.create(location_id: 0, country: "Magyarorszag", county: "Csongrad", city:"Szeged")
+    location2 = Location.create(location_id: 0, country: "Magyarorszag", county: "Bekes", city:"Bekescsaba")
+
+    daily1 = Daily.create(uploader_id: user1.username, location_id: location1.city, month:"January", day: 1,
                           min: -0.1, max: 0.1, precipitation: 0.0, storm: false, shower: false,
                           rain: false, fog: true, sleet: false, snow: false, snow_shower: false,
                           snow_cover: 0, note: "test")
-    daily2 = Daily.create(uploader_id: user2.username, location_id: "Szeged", month:"January", day: 2,
+    daily2 = Daily.create(uploader_id: user2.username, location_id: location2.city, month:"January", day: 2,
                           min: -0.5, max: 0.0, precipitation: 0.1, storm: false, shower: false,
                           rain: false, fog: true, sleet: true, snow: false, snow_shower: false,
                           snow_cover: 0, note: "test")
