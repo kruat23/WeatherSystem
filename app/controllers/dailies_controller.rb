@@ -26,6 +26,7 @@ class DailiesController < ApplicationController
   # POST /dailies.json
   def create
     @daily = Daily.new(daily_params)
+    @daily.uploader_id = current_user.username
 
     respond_to do |format|
       if @daily.save
