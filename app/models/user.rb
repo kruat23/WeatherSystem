@@ -5,4 +5,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :dailies, dependent: :destroy
+
+  def admin?
+    has_role?(:admin)
+  end
+
+  def client?
+    has_role?(:client)
+  end
 end

@@ -1,6 +1,7 @@
 class DailiesController < ApplicationController
+  load_and_authorize_resource
   before_action :set_daily, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /dailies
   # GET /dailies.json
