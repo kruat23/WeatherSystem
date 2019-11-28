@@ -1,57 +1,46 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Dailies</h1>
-
-<table>
-  <thead>
+<%= notice %>
+<h2>Dailies List</h2>
+<div class="product-block">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
     <tr>
-      <th>Uploader</th>
-      <th>Location</th>
-      <th>Month</th>
-      <th>Day</th>
-      <th>Min</th>
-      <th>Max</th>
-      <th>Precipitation</th>
-      <th>Storm</th>
-      <th>Shower</th>
-      <th>Rain</th>
-      <th>Fog</th>
-      <th>Sleet</th>
-      <th>Snow</th>
-      <th>Snow shower</th>
-      <th>Snow cover</th>
-      <th>Note</th>
-      <th colspan="3"></th>
+      <th class="col-md-2">Uploader</th>
+      <th class="col-md-2">Location</th>
+      <th class="col-md-2">Month</th>
+      <th class="col-md-2">Day</th>
+      <th class="col-md-2">Min</th>
+      <th class="col-md-2">Max</th>
+      <th class="col-md-2">Precipitation</th>
+      <th class="col-md-2">Snow cover</th>
+      <th class="col-md-2">Note</th>
+      <th class="col-md-2, text-center" colspan="3">Options</th>
     </tr>
-  </thead>
-
-  <tbody>
+    </thead>
+    <tbody>
     <% @dailies.each do |daily| %>
       <tr>
-        <td><%= daily.uploader_id %></td>
-        <td><%= daily.location_id %></td>
-        <td><%= daily.month %></td>
-        <td><%= daily.day %></td>
-        <td><%= daily.min %></td>
-        <td><%= daily.max %></td>
-        <td><%= daily.precipitation %></td>
-        <td><%= daily.storm %></td>
-        <td><%= daily.shower %></td>
-        <td><%= daily.rain %></td>
-        <td><%= daily.fog %></td>
-        <td><%= daily.sleet %></td>
-        <td><%= daily.snow %></td>
-        <td><%= daily.snow_shower %></td>
-        <td><%= daily.snow_cover %></td>
-        <td><%= daily.note %></td>
-        <td><%= link_to 'Show', daily %></td>
-        <td><%= link_to 'Edit', edit_daily_path(daily) %></td>
-        <td><%= link_to 'Destroy', daily, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="col-md-2"><%= daily.uploader_id %></td>
+        <td class="col-md-2"><%= daily.location_id %></td>
+        <td class="col-md-2"><%= daily.month %></td>
+        <td class="col-md-2"><%= daily.day %></td>
+        <td class="col-md-2"><%= daily.min %></td>
+        <td class="col-md-2"><%= daily.max %></td>
+        <td class="col-md-2"><%= daily.precipitation %></td>
+        <td class="col-md-2"><%= daily.snow_cover %></td>
+        <td class="col-md-2"><%= daily.note %></td>
+        <td class="col-md-2">
+          <%= link_to 'More', daily_path(daily), class: "btn btn-info" %>
+        </td>
+        <td class="col-md-2">
+          <%= link_to 'Edit', edit_daily_path(daily), class: "btn  btn-warning" %>
+        </td>
+        <td class="col-md-2">
+          <%= link_to 'Destroy', daily_path(daily), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+        </td>
       </tr>
     <% end %>
-  </tbody>
-</table>
-
+    </tbody>
+  </table>
+</div>
 <br>
-
-<%= link_to 'New Daily', new_daily_path %>
+<%= link_to 'New Daily', new_daily_path, class: "btn btn-primary" %>

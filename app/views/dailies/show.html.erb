@@ -1,4 +1,5 @@
-<p id="notice"><%= notice %></p>
+<%= notice %>
+<h2>Daily Data</h2>
 
 <p>
   <strong>Uploader:</strong>
@@ -80,5 +81,5 @@
   <%= @daily.note %>
 </p>
 
-<%= link_to 'Edit', edit_daily_path(@daily) %> |
-<%= link_to 'Back', dailies_path %>
+<%= link_to 'Edit', edit_daily_path(@daily), class: "btn btn-warning" %>
+<%= link_to "Back", dailies_path, class: "btn btn-default" %>
