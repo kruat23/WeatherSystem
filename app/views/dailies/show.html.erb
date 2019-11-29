@@ -1,85 +1,85 @@
-<%= notice %>
-<h2>Daily Data</h2>
+<%= flash_messages %>
+<h2><%= t('data_page.showing') %></h2>
 
 <p>
-  <strong>Uploader:</strong>
+  <strong><%= t('activerecord.attributes.daily.uploader_id') %>:</strong>
   <%= @daily.uploader_id %>
 </p>
 
 <p>
-  <strong>Location:</strong>
+  <strong><%= t('activerecord.attributes.daily.location_id') %>:</strong>
   <%= @daily.location_id %>
 </p>
 
 <p>
-  <strong>Month:</strong>
+  <strong><%= t('activerecord.attributes.daily.month') %>:</strong>
   <%= @daily.month %>
 </p>
 
 <p>
-  <strong>Day:</strong>
+  <strong><%= t('activerecord.attributes.daily.day') %>:</strong>
   <%= @daily.day %>
 </p>
 
 <p>
-  <strong>Min:</strong>
+  <strong><%= t('activerecord.attributes.daily.min') %>:</strong>
   <%= @daily.min %>
 </p>
 
 <p>
-  <strong>Max:</strong>
+  <strong><%= t('activerecord.attributes.daily.max') %>:</strong>
   <%= @daily.max %>
 </p>
 
 <p>
-  <strong>Precipitation:</strong>
+  <strong><%= t('activerecord.attributes.daily.precipitation') %>:</strong>
   <%= @daily.precipitation %>
 </p>
 
 <p>
-  <strong>Storm:</strong>
+  <strong><%= t('activerecord.attributes.daily.storm') %>:</strong>
   <%= @daily.storm %>
 </p>
 
 <p>
-  <strong>Shower:</strong>
+  <strong><%= t('activerecord.attributes.daily.shower') %>:</strong>
   <%= @daily.shower %>
 </p>
 
 <p>
-  <strong>Rain:</strong>
+  <strong><%= t('activerecord.attributes.daily.rain') %>:</strong>
   <%= @daily.rain %>
 </p>
 
 <p>
-  <strong>Fog:</strong>
+  <strong><%= t('activerecord.attributes.daily.fog') %>:</strong>
   <%= @daily.fog %>
 </p>
 
 <p>
-  <strong>Sleet:</strong>
+  <strong><%= t('activerecord.attributes.daily.sleet') %>:</strong>
   <%= @daily.sleet %>
 </p>
 
 <p>
-  <strong>Snow:</strong>
+  <strong><%= t('activerecord.attributes.daily.snow') %>:</strong>
   <%= @daily.snow %>
 </p>
 
 <p>
-  <strong>Snow shower:</strong>
+  <strong><%= t('activerecord.attributes.daily.snow_shower') %>:</strong>
   <%= @daily.snow_shower %>
 </p>
 
 <p>
-  <strong>Snow cover:</strong>
+  <strong><%= t('activerecord.attributes.daily.snow_cover') %>:</strong>
   <%= @daily.snow_cover %>
 </p>
 
 <p>
-  <strong>Note:</strong>
+  <strong><%= t('activerecord.attributes.daily.note') %>:</strong>
   <%= @daily.note %>
 </p>
 
-<%= link_to 'Edit', edit_daily_path(@daily), class: "btn btn-warning" %>
-<%= link_to "Back", dailies_path, class: "btn btn-default" %>
+<%= link_to t('data_page.edit'), edit_daily_path(@daily), class: "btn btn-warning" %>
+<%= link_to t('global.forms.back'), dailies_path, class: "btn btn-default" %>

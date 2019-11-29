@@ -12,26 +12,26 @@
           <a class="navbar-brand" href="/">MetLand</a>
           <ul class="nav navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/"><%= t('global.menu.home')%><span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/dailies">Data</a>
+              <a class="nav-link" href="/dailies"><%= t('global.menu.data')%></a>
             </li>
             <% if user_signed_in? %>
             <li class="nav-item">
-              <%= link_to "Profile", edit_user_registration_path %>
+              <%= link_to t('global.menu.profile'), edit_user_registration_path %>
             </li>
             <% else %>
             <li class="nav-item">
-              <a class="nav-link" href="/users/sign_up"><i class="fa fa-user"></i> Sign Up</a>
+              <a class="nav-link" href="/users/sign_up"><i class="fa fa-user"></i><%= t('global.menu.sign_up')%></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/users/sign_in"><i class="fa fa-sign-in"></i> Login</a>
+              <a class="nav-link" href="/users/sign_in"><i class="fa fa-sign-in"></i><%= t('global.menu.log_in')%></a>
             </li>
             <% end %>
             <% if user_signed_in? %>
               <li role="separator" class="divider"></li>
-              <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+              <li><%= link_to t('global.menu.log_out'), destroy_user_session_path, method: :delete %></li>
             <% end %>
           </ul>
         </div>

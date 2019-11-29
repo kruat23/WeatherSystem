@@ -1,0 +1,46 @@
+hu:
+  home_page:
+    welcome: "Üdvözöllek a MetLanden!"
+    services: "Szereted az időjárást? Itt a helyed!"
+  data_page:
+    options: "Lehetőségek"
+    dailies: "Napi adatok"
+    editing: "Napi adat szerkesztése"
+    showing: "Napi adat"
+    new: "Új adat felvitele"
+    more: "Részletek"
+    edit: "Szerkesztés"
+    destroy: "Törlés"
+    confirm: "Biztos?"
+  global:
+    menu:
+      home: "Főoldal"
+      data: "Adatok"
+      profile: "Profilom"
+      sign_up: " Regisztráció"
+      log_in: " Belépés"
+      log_out: "Kilépés"
+    forms:
+      submit: "Elküld"
+      back: "Vissza"
+  activerecord:
+    attributes:
+      daily:
+        uploader_id: "Feltöltő"
+        location_id: "Város"
+        month: "Hónap"
+        day: "Nap"
+        min: "Min"
+        max: "Max"
+        precipitation: "Csapadék"
+        storm: "Zivatar"
+        shower: "Zápor"
+        rain: "Eső"
+        fog: "Köd"
+        sleet: "Ónos"
+        snow: "Hó"
+        snow_shower: "Hózápor"
+        snow_cover: "Hóréteg"
+        note: "Megjegyzés"
+        options: "Lehetőségek"
+

@@ -1,4 +1,4 @@
-<h2>Editing Daily</h2>
+<h2><%= t('data_page.editing') %></h2>
 
 <%= render 'form', daily: @daily %>
-<%= link_to 'Back', dailies_path, class: "btn btn-default" %>
+<%= link_to t('global.forms.back'), dailies_path, class: "btn btn-default" %>

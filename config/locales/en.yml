@@ -30,4 +30,46 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  home_page:
+    welcome: "Welcome to MetLand!"
+    services: "We provide some fancy services to people who love weather."
+  data_page:
+    options: "Options"
+    dailies: "Dailies List"
+    editing: "Editing Daily"
+    showing: "Daily Data"
+    new: "New Daily"
+    more: "More"
+    edit: "Edit"
+    destroy: "Destroy"
+    confirm: "Are you sure?"
+  global:
+    menu:
+      home: "Home"
+      data: "Data"
+      profile: "Profile"
+      sign_up: " Sign Up"
+      log_in: " Login"
+      log_out: "Logout"
+    forms:
+      submit: "Submit"
+      back: "Back"
+  activerecord:
+    attributes:
+      daily:
+        uploader_id: "Uploader"
+        location_id: "Location"
+        month: "Month"
+        day: "Day"
+        min: "Min"
+        max: "Max"
+        precipitation: "Precipitation"
+        storm: "Storm"
+        shower: "Shower"
+        rain: "Rain"
+        fog: "Fog"
+        sleet: "Sleet"
+        snow: "Snow"
+        snow_shower: "Snow shower"
+        snow_cover: "Snow cover"
+        note: "Note"
