@@ -49,4 +49,25 @@ hu:
         snow_cover: "Hóréteg"
         note: "Megjegyzés"
         options: "Lehetőségek"
+      user:
+        email: "Email"
+        username: "Felhasználónév"
+        password: "Jelszó"
+        password_confirmation: "Jelszó újra"
+        current_password: "Jelenlegi jelszó"
+        remember_me: "Maradjak bejelentkezve"
+  devise:
+    character_minimum: "karakter minimum"
+    sign_up: "Regisztráció"
+    register: "Regisztráció"
+    edit: "Profil szerkesztése"
+    update: "Frissítés"
+    cancel: "Profil deaktiválása"
+    back: "Vissza"
+    unhappy: "Nem vagy elégedett?"
+    login: "Belépés"
+    forgot: "Elfelejtetted a jelszavad?"
+    leave_blank: "(hagyd üresen ha nem akarod megváltoztatni)"
+    need_current_password: "(add meg a jelenlegi jelszavad, hogy el tudjuk menteni a változtatásokat)"
+
 

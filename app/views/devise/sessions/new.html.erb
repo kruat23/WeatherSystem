@@ -1,6 +1,6 @@
 <%= flash_messages %>
 <header>
-  <h2>Login</h2>
+  <h2><%= t('devise.login') %></h2>
 </header>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="devise-container">
@@ -30,5 +30,5 @@
       </div>
     </div>
   </div>
-  <%= f.submit "Login", class: "btn btn-lg btn-primary" %>
+  <%= f.submit t('devise.login'), class: "btn btn-lg btn-primary" %>
 <% end %>
