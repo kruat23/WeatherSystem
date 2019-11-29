@@ -36,6 +36,7 @@ en:
   data_page:
     options: "Options"
     dailies: "Dailies List"
+    adding: "New Daily"
     editing: "Editing Daily"
     showing: "Daily Data"
     new: "New Daily"
@@ -54,6 +55,11 @@ en:
     forms:
       submit: "Submit"
       back: "Back"
+    messages:
+      errors:
+        one: "One error prohibited this daily from being saved"
+        other: "%{count} errors prohibited this daily from being saved"
+      must: "must be given"
   activerecord:
     attributes:
       daily:

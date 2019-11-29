@@ -1,7 +1,7 @@
 <%= form_for(@daily) do |f| %>
   <% if @daily.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@daily.errors.count, "error") %> prohibited this daily from being saved:</h2>
+      <h2><%= t 'global.messages.errors', count: daily.errors.count %></h2>
       <ul>
         <% @daily.errors.full_messages.each do |message| %>
           <li><%= message %></li>
@@ -18,36 +18,37 @@
   <div class="row">
     <div class="form-group col-md-8">
       <%= f.label :location_id %>
-      <%= f.select :location_id, "Select City": ['Bekescsaba','Kecskemet','Szeged','Szolnok'] %>
+      <%= f.select :location_id, "Select City": ['Békéscsaba','Kecskemét','Szeged','Szolnok'] %>
     </div>
   </div>
   <div class="row">
     <div class="form-group col-md-8">
-      <%= f.label :month %><br>
-      <%= f.text_field :month, class: "form-control" %>
+      <%= f.label :month %>
+      <%= f.select :month, "Select month": ['Január','Február','Március','Április', 'Május', 'Június', 'Július',
+      'Augusztus', 'Szeptember', 'Október', 'November', 'December'] %>
     </div>
   </div>
   <div class="row">
     <div class="form-group col-md-8">
-      <%= f.label :day  %><br>
+      <%= f.label :day  %>
       <%= f.number_field :day, {min: 1, max: 31} %>
     </div>
   </div>
   <div class="row">
     <div class="form-group col-md-8">
-      <%= f.label :min %><br>
+      <%= f.label :min %>
       <%= f.text_field :min, class: "form-control" %>
     </div>
   </div>
   <div class="row">
     <div class="form-group col-md-8">
-      <%= f.label :max %><br>
+      <%= f.label :max %>
       <%= f.text_field :max, class: "form-control" %>
     </div>
   </div>
   <div class="row">
     <div class="form-group col-md-8">
-      <%= f.label :precipitation %><br>
+      <%= f.label :precipitation %>
       <%= f.text_field :precipitation, class: "form-control" %>
     </div>
   </div>
@@ -71,13 +72,13 @@
   </div>
   <div class="row">
     <div class="form-group col-md-8">
-      <%= f.label :snow_cover %><br>
+      <%= f.label :snow_cover %>
       <%= f.number_field :snow_cover, {min: 0, max: 100} %>
     </div>
   </div>
   <div class="row">
     <div class="form-group col-md-8">
-      <%= f.label :note %><br>
+      <%= f.label :note %>
       <%= f.text_area :note, class: "form-control" %>
     </div>
   </div>

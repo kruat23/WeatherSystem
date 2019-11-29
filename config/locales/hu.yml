@@ -5,6 +5,7 @@ hu:
   data_page:
     options: "Lehetőségek"
     dailies: "Napi adatok"
+    adding: "Új adat felvitele"
     editing: "Napi adat szerkesztése"
     showing: "Napi adat"
     new: "Új adat felvitele"
@@ -23,6 +24,11 @@ hu:
     forms:
       submit: "Elküld"
       back: "Vissza"
+    messages:
+      errors:
+        one: "Az alábbi hiba megakadályozza a napi adat elmentését"
+        other: "Az alábbi %{count} hiba megakadályozza a napi adat elmentését"
+      must: "megadása kötelező"
   activerecord:
     attributes:
       daily:
